@@ -44,14 +44,14 @@ return this.http.post(`${this.loginURL}authenticate`,loginObj)
 return this.http.get(this.AllDetailsURL);
   }
   GetOnedetail(id:any){
-    debugger
+    
     return this.http.get(this.getOneDetails+id)
   }
   Edituser(id:any,value:any){
-    debugger
+    
     return this.http.put(this.EditUrl+id,value)
   }
-  ImageUpload(image:any){
-    return this.http.post(this.imageUploadUrl,image)
-  }
+  // ImageUpload(image:any){
+  //   return this.http.post(this.imageUploadUrl,image)
+  // }
 }

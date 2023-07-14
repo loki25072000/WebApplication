@@ -21,14 +21,10 @@ ngOnInit(): void {
 }
 
 addStar(id:any){
-  // this.el.nativeElement.sty
-  let myDiv = <HTMLElement>document.getElementById(id);
 
-  // this.editDetail(id)
-  // console.log(this.allData);
- 
+  let myDiv = <HTMLElement>document.getElementById(id);
      let curr = this.allData.find((p: { userId: any; })=>{
-      debugger
+    
        return p.userId==id
      })
      if(curr.star==null){
@@ -52,11 +48,7 @@ else{
 }
      }
      
- let img="profile.png"
-     this.service.ImageUpload(img).subscribe(sub=>{
-      console.log(sub);
-      
-     })
+
 
      
   
@@ -64,17 +56,14 @@ else{
 
 detail:any;
 view(index:any){
-  debugger
   this.getOneDetail(index)
- 
- 
 }
 
 
 getOneDetail(ind:any){
-  debugger
+
   this.service.GetOnedetail(ind).subscribe(sub=>{
-    debugger
+
    
    let data=JSON.stringify(sub) 
    this.router.navigate(["viewDetails/", data])
@@ -84,18 +73,10 @@ getOneDetail(ind:any){
 data:any;
 id:any;
 editDetail(id:any){
-debugger
-//   this.service.GetOnedetail(id).subscribe(sub=>{
-//     debugger
-//     console.log(sub);
-//      this.data= sub ;
-//  this.data= this.data.userId = id;
-     
-    
-  
-//   })
+
+
 let curr = this.allData.find((p: { id: any; })=>{
-  debugger
+  
    return p.id==id
  })
 

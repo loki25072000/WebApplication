@@ -92,8 +92,10 @@
       100% { opacity:1 }
   } */
   #messCount{
-  color: #ff3f3f;
-  font-weight: bold;
+    color: #ff3f3f;
+    font-weight: bold;
+    font-size: 17px;
+    margin-left: 4px;
 }
   body {
     margin: 0px;
