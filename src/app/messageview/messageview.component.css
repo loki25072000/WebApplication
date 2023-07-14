@@ -1,0 +1,44 @@
+#bodyrow1{
+    height: 76px;
+    margin-top: 36px;
+}
+#name{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #18589b;
+   
+}
+img{
+    width: 78%;
+    height: 100%;
+
+}
+
+#time{
+    color: gray;
+    font-family: cursive;
+    font-size: 13px;
+}
+#Subject{
+    text-align: center;
+    color: #18589b;
+    margin-top: 20px;
+}
+.fa-star{
+    font-size: 22px;
+    margin-top: 7px;
+    margin-left: 10px;
+    cursor: pointer;
+
+}
+.time-left{
+    margin-top: 37px;
+}
+#msgDiv{
+    margin-top: 50px;
+}
+#mess{
+    line-height: 35px;
+  
+}

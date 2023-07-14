@@ -1,0 +1,62 @@
+input[type="text"]{
+    outline: none;
+    box-shadow: none !important;
+    border-bottom:1px solid gray !important;
+    background: transparent;
+   
+}
+input{
+    border: none;
+    width: 25%;
+}
+form{
+    margin-left: 1%;
+}
+textarea {
+    outline: none;
+    box-shadow: none !important;
+    border: none!important;
+    background: transparent;
+    
+    width: 90%;
+    background-color: aliceblue;
+    
+    
+}
+#attach{
+    color: #18589b;
+    position: absolute;
+    right: 10%;
+    margin-top: 6%;
+    font-size: 36px;
+}
+#send{
+    right: 10%;
+    position: absolute;
+
+}
+i:hover , svg{
+    cursor: pointer;
+
+}
+.fa-file{
+  
+  font-size: 23px;
+  color: #18589b;
+  margin-left: 65%;
+  margin-top: 17px;
+
+}
+
+/*  */
+label{
+  font-weight: bold;
+  font-size: 19px;
+}
+#username{
+  color: #18589b;
+    font-family: math;
+    letter-spacing: 0px;
+    font-size: 16px;
+    font-weight: bold;
+}

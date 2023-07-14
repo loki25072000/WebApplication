@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<div style="display: flex; width: 100%; background-color: #f0f8ff;">
+    <div style="width: 10%;">
+        <app-sidenav></app-sidenav>
+    </div>
+    <div style="width: 90%; background-color: aliceblue;">
+        <h2 class="text-center" style="margin-top: 10px;font-family: auto;">Daily Report</h2>
+
+       
+        <form [formGroup]="usersGroup">
+           
+            <div style="margin-top: 10%;">
+                <label>From </label><span id="username" style="display: block;margin-left: 8px;">  {{username}}</span>
+                <label for="to" style="display: block;">To</label>
+                <input type="text" id="to" class="form-control form-control-sm" formControlName="to">
+                <label for="subject">Subject</label>
+                <input type="text" style="width: 90%;" id="subject" class="form-control form-control-sm" formControlName="subject">
+                <!-- <div id="attach"><i class="fa-solid fa-plus"></i></div> -->
+          <!--  -->
+                <textarea class="form-control" rows="5" id="Message" name="text" placeholder="type..." formControlName="Message">
+                   
+                </textarea>
+            
+                <i class="fa-solid fa-file"></i>
+                <input (click)="sendMessage()" type="submit" class="btn " style="color: white; background-color: #18589b; width: 20%; float: right; margin-right: 10%; margin-top: 10px;" value="Submit">
+            </div>
+         
+        </form>
+    </div>
+</div>
+
+

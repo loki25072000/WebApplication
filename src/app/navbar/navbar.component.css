@@ -1,0 +1,15 @@
+
+/* .nav-pills > li > a.active {
+    background-color: #6b872a!important;
+} */
+
+#initial{
+    padding: 4px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+}

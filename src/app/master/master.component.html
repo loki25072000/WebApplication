@@ -1,0 +1,43 @@
+<app-navbar></app-navbar>
+<div style="width: 100%; display: flex;">
+   
+</div>
+<div style="width: 100% ;display: flex;">
+    <div style="width: 10%;">
+        <app-sidenav></app-sidenav>
+    </div>
+    <div style="width: 90%;">
+        <div class="container darker" id={{i+1}} style=" margin-top: 10px; height: 80px; " *ngFor="let data of allData let i = index">
+      
+            <div style="display: flex; width: 100%;">
+                <div style="width: 5%;">
+                    <div class="img" >
+                        <img src="../../assets/images/profile.png" alt="Avatar" class="right" style="width:100%;"></div>
+                </div>
+           
+                <div style="width: 90%;"  (click)="view(i+1)">
+                    <span  class="name">{{data.userName}}</span>
+                    <p>{{data.subject}}</p></div>
+                   <div style="width: 5%;">
+                    <i class=" fa fa-solid fa-star" (click)="addStar(i+1)" id={{i+1}}></i>
+                    <p class="time-left">{{data.time}}</p>
+                </div> 
+            </div>
+            
+                  </div>
+            
+    </div>
+</div>
+<!-- -->
+
+    
+
+     
+      <!--
+     
+     
+      <div >
+         
+      
+         
+      </div>  -->

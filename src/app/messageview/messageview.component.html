@@ -1,0 +1,37 @@
+<div style="width: 100%; display: flex;">
+    <div style="width: 100%; position: fixed; top: 0;" >
+        <app-navbar></app-navbar>
+    </div>
+
+</div>
+<div style="width: 100% ;display: flex;">
+    <div style="width: 10%;  background-color: aliceblue;">
+        <app-sidenav></app-sidenav>
+    </div>
+    <div style="width: 90%; background-color: aliceblue; margin-top: 6%;" *ngFor="let data of obj">
+        <div style="display: flex; width: 100%;">
+            <div style="width: 10%; background-color: aliceblue;" id="img">
+                <img src="../../assets/images/profile.png" alt="Avatar">
+
+            </div>
+            <div style="width: 5%;">
+                <p id="name">{{data.userName}}</p>
+            </div>
+            <div style="width: 80%;">
+                <h3 style="text-align: center;" id="Subject">{{data.subject}}</h3>
+            </div>
+            <div style="width: 5%;">
+                <i class=" fa fa-solid fa-star"></i>
+                <p class="time-left">{{data.time}}</p>
+            </div>
+        </div>
+        <!-- content -->
+        <div style="width: 100%;background-color: aliceblue;">
+            <div id="msgDiv">
+
+                <p id="mess">{{data.message}}</p>
+            </div>
+           
+        </div>
+    </div>
+</div>
