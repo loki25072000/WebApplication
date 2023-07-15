@@ -39,7 +39,7 @@ username:any;
       console.log(sub);
 
     })
-
+this.usersGroup.reset()
   }
   date: Date = new Date();
   time = this.date.getHours();

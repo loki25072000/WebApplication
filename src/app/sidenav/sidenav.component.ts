@@ -10,24 +10,20 @@ export class SidenavComponent implements OnInit {
 constructor(private service : DatabaseService){}
 message:any;
 messageCount:any
-stardeMessCount:any=[]
+starArry:any=[]
+starCount:any;
 ngOnInit(): void {
   this.service.getAllDetails().subscribe(sub=>{
-    // console.log(sub);
-
     this.message =sub
-    for (let item of this.message) {
-      if (item.star =="stared") {
-         this.stardeMessCount=item
-        
-      }
-  }      
-console.log(this.stardeMessCount.length);
-
-  
     this.messageCount= this.message.length
- 
-    
+    for(let data of this.message){
+   if(data.star=='stared')
+      this.starArry.push(data.star)
+    }
+    console.log(this.starArry.length);
+    this.starCount=this.starArry.length
   })
+  
 }
+
 }

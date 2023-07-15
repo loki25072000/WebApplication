@@ -9,32 +9,60 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./master.component.css']
 })
 export class MasterComponent implements OnInit {
-constructor(private service : DatabaseService, private router:Router,private el: ElementRef,private toastr: ToastrService,){}
+constructor(private service : DatabaseService, private router:Router,private toastr: ToastrService,){}
 allData:any;
+
 ngOnInit(): void {
+
+
   this.service.getAllDetails().subscribe(sub=>{
   
     this.allData =sub
+    // localStorage.setItem('msgCount',JSON.stringify( this.allData ))
+    for(let data of this.allData){
   
+    //   let myDiv = <HTMLElement>document.getElementById(data.userId);
+    //  let curr = this.allData.find((p: { userId: any; })=>{
     
-  })
+    //    return p.userId==data.userId
+    //  })
+    //  console.log(myDiv);
+
+if(data.star=="stared"){
+  
+
+  console.log(data);
+  localStorage.setItem('starcount',JSON.stringify(data))
+
+  
 }
+     
+    }
+   
+  })
+
+  
+  
+}
+
 
 addStar(id:any){
 
   let myDiv = <HTMLElement>document.getElementById(id);
+  console.log(myDiv);
+  
      let curr = this.allData.find((p: { userId: any; })=>{
     
        return p.userId==id
      })
      if(curr.star==null){
-      console.log(curr);
+
       curr.star="stared"
            this.service.Edituser(id,curr).subscribe(sub=>{
            })
      }
      else{
-      console.log(curr);
+
       curr.star=null
            this.service.Edituser(id,curr).subscribe(sub=>{
            })
