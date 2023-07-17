@@ -6,13 +6,15 @@ import { MasterComponent } from './master/master.component';
 import { authGuard } from './guards/auth.guard';
 import { MessageComponent } from './message/message.component';
 import { MessageviewComponent } from './messageview/messageview.component';
+import { StaredMessageComponent } from './stared-message/stared-message.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'login',component:LoginComponent},
   {path:'users',component:UserpageComponent,canActivate:[authGuard]},
   {path:'admin',component:MasterComponent,canActivate:[authGuard]},
-  {path:'viewDetails/:id',component:MessageviewComponent}
+  {path:'viewDetails/:id',component:MessageviewComponent},
+  {path:'stared',component:StaredMessageComponent}
 ];
 
 @NgModule({

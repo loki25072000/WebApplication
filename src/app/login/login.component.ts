@@ -59,6 +59,8 @@ export class LoginComponent implements OnInit {
    
         this.service.storeToken(res.token)
         this.service.storeUser(res.username)
+        
+        this.service.storeRole(res.role)
         this.showSuccess()
         if(res.role=="Admin"){
           this.router.navigate(["/admin"])

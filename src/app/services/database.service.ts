@@ -26,6 +26,20 @@ return this.http.post(`${this.loginURL}authenticate`,loginObj)
   getuser(){
     return sessionStorage.getItem('username');
   }
+  storeRole(role:any){
+    
+    sessionStorage.setItem('Role', role);
+  }
+  getRole(){
+    
+   return sessionStorage.getItem('Role');
+  }
+  setMessageCount(messCount:any){
+    sessionStorage.setItem('messageCount', messCount);
+  }
+  getMessageCount(){
+   return sessionStorage.getItem('messageCount' );
+  }
   storeToken(tokenValue:string){
     
     sessionStorage.setItem('token', tokenValue);

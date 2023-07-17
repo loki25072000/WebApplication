@@ -5,12 +5,12 @@
 
 </div>
 <div style="width: 100% ;display: flex;">
-    <div style="width: 10%;  background-color: aliceblue;">
+    <div style="width: 10%; ">
         <app-sidenav></app-sidenav>
     </div>
-    <div style="width: 90%; background-color: aliceblue; margin-top: 6%;" *ngFor="let data of obj">
+    <div style="width: 90%;  margin-top: 6%;" *ngFor="let data of obj">
         <div style="display: flex; width: 100%;     margin-top: 20px;">
-            <div style="width: 10%; background-color: aliceblue;" id="img">
+            <div style="width: 10%;" id="img">
                 <img src="../../assets/images/profile.png" alt="Avatar">
 
             </div>
@@ -26,7 +26,7 @@
             </div>
         </div>
         <!-- content -->
-        <div style="width: 100%;background-color: aliceblue;">
+        <div style="width: 100%;height: 100%; ">
             <div id="msgDiv">
 
                 <p id="mess">{{data.message}}</p>

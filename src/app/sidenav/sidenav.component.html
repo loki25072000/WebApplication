@@ -21,14 +21,14 @@
        
  <ul>
    
- <li>                                   
- <a routerLink="#">
+ <li *ngIf="role=='Admin'">                                   
+ <a routerLink="/stared">
   <i class=" fa fa-solid fa-star"><span id="messCount">{{starCount}}</span></i>
  <span class="nav-text">Stared</span>
  </a>
  </li>   
     
- <li>                                 
+ <li *ngIf="role=='Admin'">                                 
  <a routerLink="#">
  <i class="fa fa-user fa-lg"></i>
  <span class="nav-text">Users</span>
@@ -36,8 +36,8 @@
  </li>   
  
      
- <li>                                 
- <a routerLink="#">
+ <li *ngIf="role=='Admin'">                                 
+ <a routerLink="/admin">
  <i class="fa fa-envelope-o fa-lg"><span id="messCount">{{messageCount}}</span></i>
  <span class="nav-text">Message</span>
  </a>

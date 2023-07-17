@@ -14,6 +14,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { MasterComponent } from './master/master.component';
 import { MessageComponent } from './message/message.component';
 import { MessageviewComponent } from './messageview/messageview.component';
+import { StaredMessageComponent } from './stared-message/stared-message.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { MessageviewComponent } from './messageview/messageview.component';
     MasterComponent,
     MessageComponent,
     MessageviewComponent,
+    StaredMessageComponent,
 
   ],
   imports: [

@@ -12,6 +12,7 @@ message:any;
 messageCount:any
 starArry:any=[]
 starCount:any;
+role:any
 ngOnInit(): void {
   this.service.getAllDetails().subscribe(sub=>{
     this.message =sub
@@ -24,6 +25,9 @@ ngOnInit(): void {
     this.starCount=this.starArry.length
   })
   
+ this.role = this.service.getRole()
+ console.log(this.role);
+ 
 }
-
+ 
 }

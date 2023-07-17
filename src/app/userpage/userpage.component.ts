@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DatabaseService } from '../services/database.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-userpage',
@@ -9,21 +10,29 @@ import { DatabaseService } from '../services/database.service';
 })
 export class UserpageComponent implements OnInit {
   usersGroup!: FormGroup;
-  constructor(private fb: FormBuilder, private service: DatabaseService,) {
+  constructor(private fb: FormBuilder, private service: DatabaseService,private router:Router) {
 
   }
 username:any;
+role:any;
   ngOnInit(): void {
-    this.usersGroup = this.fb.group({
-      to: ["", Validators.required],
-      subject: ["", Validators.required],
-      Message: ["", Validators.required]
-    })
+this.role = this.service.getRole();
+if(this.role=="users"){
 
- this.username =this.service.getuser()
+  this.usersGroup = this.fb.group({
+    to: ["", Validators.required],
+    subject: ["", Validators.required],
+    Message: ["", Validators.required]
+  })
 
-    console.log(this.service.getToken());
+this.username =this.service.getuser()
 
+  console.log(this.service.getToken());
+
+}
+else{
+  this.router.navigate(['/'])
+}
   }
   sendMessage() {
     let FormGroupData = this.usersGroup.value;
